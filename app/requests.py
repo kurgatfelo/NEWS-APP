@@ -18,7 +18,7 @@ def configure_request(app):
     articles_base_url = app.config['SOURCE_ARTICLES_BASE_URL']
 
 
-
+def get_sources(category):
     """
     Function to get the json response to our url request
     """
@@ -36,8 +36,7 @@ def configure_request(app):
 
     return sources_results
 
-def process_results(sources_resulting_list):
-    """
+
     Function  that processes the movie result and transform them to a list of Objects
     """
     sources_results = []
