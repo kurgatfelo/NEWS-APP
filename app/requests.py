@@ -18,7 +18,7 @@ def configure_request(app):
     articles_base_url = app.config['SOURCE_ARTICLES_BASE_URL']
 
 
-def get_sources(category):
+
     """
     Function to get the json response to our url request
     """
