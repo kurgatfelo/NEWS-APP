@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <!-- Styles block -->    
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+    {% endblock %}
+
+</head>
+
+    <!-- Content block -->
+    {% block content %}
+    
+    <div class="container-fluid" style="background-color: white;margin: top -50px;;">
+
+        <h1 style = "text-align:center; color:blue; font-weight:600;font-family: 'Cinzel Decorative', cursive;">{{title}}</h1>
+    
+        <p style = "font-family: 'Charm', cursive; font-size:18px;color: red;text-align: center;">{{heading}}</p>
+        
+        
+        <!-- Sports section -->
+        
+        <ul>
+            <h2 style = "text-align:center; color:red; font-weight:600;font-family: 'Cinzel Decorative', cursive;"><marquee behavior="scroll" direction="up"><center>Sports News Sources</center></marquee></h2>
+            <hr>
+            {{macro.display_sources_list(sports)}}
+        </ul>
+        
+        <!-- Business section -->
+        
+        <ul>
+            <h2 style = "text-align:center; color:red; font-weight:600;font-family: 'Cinzel Decorative', cursive;list-style-type: none;"><marquee behavior="scroll" direction="up"><center>Business News Sources</center></marquee></h2>
+            <hr>
+            {{macro.display_sources_list(business)}}
+        </ul>
+        
+        <!-- Entertainment section -->
+        
+        <ul>
+            <h2 style = "text-align:center; color:red; font-weight:600;font-family: 'Cinzel Decorative', cursive;"><marquee behavior="scroll" direction="up"><center>Entertainment News Sources</center></marquee></h2>
+            <hr>
+            {{macro.display_sources_list(entertainment)}}
+        </ul>
+        
+        <!-- technology section -->
+        
+        <ul>
+            <h2 style = "text-align:center; color:red; font-weight:600;font-family: 'Cinzel Decorative', cursive;"><marquee behavior="scroll" direction="up"><center>Technology News Sources</center></marquee></h2>
+            <hr>
+            {{macro.display_sources_list(tech)}}
+        </ul>
+
+        <!-- General section -->
+        <ul>
+            <h2 style="text-align:center; color:red; font-weight:600;font-family: 'Cinzel Decorative', cursive;"><marquee behavior="scroll" direction="up"><center>General News Source</center></marquee>
+        </h2>
+            <hr>
+            {{macro.display_sources_list(general)}}
+        </ul>
+
+    </div>
+
+    {% endblock %}
+
+</html>
