@@ -54,7 +54,7 @@ def process_results(sources_resulting_list):
 
     return sources_results
 
-
+def get_articles(id):
     """
     Function to get the articles json response to our url request
     """
@@ -72,7 +72,7 @@ def process_results(sources_resulting_list):
 
     return articles_results
 
-def process_articles_results(articles_results_list):
+
     """
     Function that process the list of article from the request.
     """
