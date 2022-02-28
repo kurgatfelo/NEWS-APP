@@ -36,7 +36,8 @@ def get_sources(category):
 
     return sources_results
 
-
+def process_results(sources_resulting_list):
+    """
     Function  that processes the movie result and transform them to a list of Objects
     """
     sources_results = []
@@ -53,7 +54,7 @@ def get_sources(category):
 
     return sources_results
 
-def get_articles(id):
+
     """
     Function to get the articles json response to our url request
     """
