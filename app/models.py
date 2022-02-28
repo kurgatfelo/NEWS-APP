@@ -2,7 +2,7 @@ class Sources:
     """
     Sources class to define our sources objects.
     """
-    
+    def __init__(self, id, name, description, category, url, country):
         self.id = id
         self.name = name
         self.description = description
@@ -11,7 +11,7 @@ class Sources:
         self.country = country
 
 
-class Articles:
+
     """
     Articles class to define our articles objects.
     """
